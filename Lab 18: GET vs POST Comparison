@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>GET Form</h3>
+
+<form method="get">
+
+    Name:
+    <input type="text" name="getname">
+
+    <input type="submit">
+
+</form>
+
+<h3>POST Form</h3>
+
+<form method="post">
+
+    Name:
+    <input type="text" name="postname">
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if(isset($_GET['getname'])) {
+
+    echo "GET Value: "
+    . $_GET['getname']
+    . "<br>";
+
+}
+
+if(isset($_POST['postname'])) {
+
+    echo "POST Value: "
+    . $_POST['postname'];
+
+}
+
+?>
+
+</body>
+</html>
