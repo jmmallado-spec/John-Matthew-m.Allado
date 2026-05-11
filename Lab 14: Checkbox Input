@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post">
+
+    Hobbies:
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Cooking"> Cooking
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Playing Online Games">
+    Playing Online Games
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Workout at Home">
+    Workout at Home
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Watching Movies">
+    Watching Movies
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="TikTok Videos">
+    TikTok Videos
+
+    <br><br>
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if(isset($_POST['hobbies'])) {
+
+    echo "Selected Hobbies:<br>";
+
+    foreach($_POST['hobbies'] as $hobby) {
+
+        echo $hobby . "<br>";
+
+    }
+
+}
+
+?>
+
+</body>
+</html>
