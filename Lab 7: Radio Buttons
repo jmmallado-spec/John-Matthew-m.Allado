@@ -10,10 +10,10 @@
     value="Male" checked> Male
 
     <input type="radio" name="gender"
-    value="famale"> famale
+    value="Famale"> Famale
 
     <input type="radio" name="gender"
-    value="not prefer to say"> not prefer to say
+    value="Not prefer to say"> Not prefer to say
      
     <br><br>
 
