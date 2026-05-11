@@ -26,7 +26,7 @@
     value="Male" checked> Male
 
     <input type="radio" name="gender"
-    value="Famale"> Famale
+    value="Female"> Female
     
     <input type="radio" name="gender"
     value="Not prefer to say"> Not prefer to say
