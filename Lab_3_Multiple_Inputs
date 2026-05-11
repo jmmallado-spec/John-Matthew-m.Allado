@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post" action="">
+
+    Name:
+    <input type="text" name="name"
+    value="John Matthew M. Allado">
+
+    <br><br>
+
+    Email:
+    <input type="email" name="email"
+    value="jmmallado@paterostechnologicalcollege.edu.ph">
+
+    <br><br>
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    echo "Name: " . $_POST['name'] . "<br>";
+    echo "Email: " . $_POST['email'];
+
+}
+
+?>
+
+</body>
+</html>
