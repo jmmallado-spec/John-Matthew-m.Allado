@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post"
+action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+    Name:
+    <input type="text" name="name"
+    value="John Matthew M. Allado">
+
+    <br><br>
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if(isset($_POST['name'])) {
+
+    echo "Hello, "
+    . htmlspecialchars($_POST['name']);
+
+}
+
+?>
+
+</body>
+</html>
