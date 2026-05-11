@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    value="Playi<!DOCTYPE html>
 <html>
 <body>
 
@@ -24,7 +24,10 @@
     value="Male" checked> Male
 
     <input type="radio" name="gender"
-    value="Bi"> Bi
+    value="famale"> famale
+
+    <input type="radio" name="gender"
+    value="not prefer to say"> not prefer to say
 
     <br><br>
 
@@ -59,7 +62,7 @@
 
     <input type="checkbox"
     name="hobbies[]"
-    value="Playing Online Games" checked>
+ng Online Games" checked>
     Playing Online Games
 
     <br>
