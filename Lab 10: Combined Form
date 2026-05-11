@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form method="post">
+
+    Name:
+    <input type="text" name="name"
+    value="John Matthew M. Allado">
+
+    <br><br>
+
+    Email:
+    <input type="email" name="email"
+    value="jmmallado@paterostechnologicalcollege.edu.ph">
+
+    <br><br>
+
+    Gender:
+
+    <input type="radio" name="gender"
+    value="Male" checked> Male
+
+    <input type="radio" name="gender"
+    value="Bi"> Bi
+
+    <br><br>
+
+    Age:
+    <input type="number" name="age"
+    value="20">
+
+    <br><br>
+
+    Course:
+
+    <select name="course">
+
+        <option value="BSIT" selected>
+            BSIT
+        </option>
+
+    </select>
+
+    <br><br>
+
+    Hobbies:
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Cooking" checked>
+    Cooking
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Playing Online Games" checked>
+    Playing Online Games
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Workout at Home" checked>
+    Workout at Home
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="Watching Movies" checked>
+    Watching Movies
+
+    <br>
+
+    <input type="checkbox"
+    name="hobbies[]"
+    value="TikTok Videos" checked>
+    TikTok Videos
+
+    <br><br>
+
+    Message:
+
+    <br>
+
+    <textarea name="message"
+    rows="6" cols="50">
+
+Studying PHP in our BSIT Web Technology subject is both challenging and enjoyable because it helps us understand how websites and web applications are created.
+
+    </textarea>
+
+    <br><br>
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $gender = htmlspecialchars($_POST['gender']);
+    $age = htmlspecialchars($_POST['age']);
+    $course = htmlspecialchars($_POST['course']);
+    $message = htmlspecialchars($_POST['message']);
+
+    echo "<h3>Student Information</h3>";
+
+    echo "Name: " . $name . "<br>";
+    echo "Email: " . $email . "<br>";
+    echo "Gender: " . $gender . "<br>";
+    echo "Age: " . $age . "<br>";
+    echo "Course: " . $course . "<br>";
+
+    if(isset($_POST['hobbies'])) {
+
+        echo "Hobbies: ";
+
+        foreach($_POST['hobbies'] as $hobby) {
+
+            echo htmlspecialchars($hobby) . ", ";
+
+        }
+
+    }
+
+    echo "<br>";
+
+    echo "Message: " . $message;
+
+}
+
+?>
+
+</body>
+</html>
