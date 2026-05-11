@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post">
+
+    Message:
+
+    <br>
+
+    <textarea name="message"
+    rows="6" cols="50">
+
+Studying PHP in our BSIT Web Technology subject is both challenging and enjoyable because it helps us understand how websites and web applications are created.
+
+    </textarea>
+
+    <br><br>
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if(isset($_POST['message'])) {
+
+    echo "Message: "
+    . $_POST['message'];
+
+}
+
+?>
+
+</body>
+</html>
