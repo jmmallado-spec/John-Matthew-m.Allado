@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post">
+
+    Email:
+    <input type="text" name="email"
+    value="jmmallado@paterostechnologicalcollege.edu.ph">
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if(isset($_POST['email'])) {
+
+    $email = $_POST['email'];
+
+    if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+        echo "Valid Email";
+
+    } else {
+
+        echo "Invalid Email";
+
+    }
+
+}
+
+?>
+
+</body>
+</html>
