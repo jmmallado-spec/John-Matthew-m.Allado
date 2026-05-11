@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post">
+
+    Age:
+    <input type="number" name="age"
+    value="20">
+
+    <br><br>
+
+    <input type="submit">
+
+</form>
+
+<?php
+
+if(isset($_POST['age'])) {
+
+    $age = $_POST['age'];
+
+    if(is_numeric($age) && $age >= 1 && $age <= 100) {
+
+        echo "Valid Age";
+
+    } else {
+
+        echo "Invalid Age";
+
+    }
+
+}
+
+?>
+
+</body>
+</html>
